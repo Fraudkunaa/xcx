@@ -1,0 +1,9 @@
+import colorama
+import inspect
+colorama.init()
+print(f"\nІнтроспекція бібліотеки Colorama:\n{'='*30}")
+# Інтроспекція colorama.Fore
+print(f"\n{colorama.Fore}:")
+for name, member in inspect.getmembers(colorama.Fore):
+    if not name.startswith('_') and inspect.isclass(member):
+        print(f"Клас {name}:")
